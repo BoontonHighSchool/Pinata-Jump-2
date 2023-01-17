@@ -1,18 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Sprites.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1 )
+position = Vector2( 0, -10 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -3 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-enabled = true
+position = Vector2( 0, -27 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 658.435, 846.082, 584.174, 565.629 )
